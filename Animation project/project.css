@@ -1,0 +1,205 @@
+body{
+			
+			background-color: black;
+			padding: 50px;
+			
+	
+			
+		}
+
+
+		.outer{
+			height: 100%;
+			width: 100%;
+			border:5px solid white;
+			padding: 20px auto 20px auto;
+			
+			background-color: white;
+			height: 100%;
+			width: 100%;
+		
+			margin-left: 200px;
+
+		}
+
+		
+
+		
+
+
+
+
+
+.topicimage{
+	
+	color: black; 
+	
+
+	background-size: cover;
+	 text-align: center;
+	  border-radius: 20px;
+	  margin-top: -120px;
+	  margin-left: -50px; 
+	  
+}
+
+.middleimage{
+
+	height: 500px; 
+	width:1340px; 
+	
+	color: black; 
+	background-image: url('kitchen/1.jpg');
+	background-size: cover;
+	background-attachment:fixed;
+	 text-align: center;
+	  border-radius: 20px;
+	  margin-top: 100px;
+	  margin-left: -50px; 
+}
+
+.endimage{
+
+	height: 600px; 
+	width:1340px; 
+	color: black; 
+	background-image: url('living/7.jpg');
+	background-size: cover;
+	background-attachment:fixed;
+	 text-align: center;
+	  border-radius: 20px;
+	  margin-top: 720px;
+	  margin-left: -50px; 
+
+}
+
+*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+
+		.sidebar{
+			position: absolute;
+			left: -250px;
+			width: 250px;
+			height: 100%;
+			background: black;
+			transition: all .5s ease;
+		}
+
+		.sidebar header{
+			font-size: 22px;
+			color: white;
+			text-align: center;
+			line-height: 100px;
+			background: gray;
+			user-select: none;
+		}
+
+		.sidebar ul a{
+			display: block;
+			height: 100%;
+			width: 100%
+			line-height: 100px;
+			font-size: 35px;
+			color: gold;
+			font-style: italic;
+			padding-left: 40px;
+			box-sizing: border-box;
+			border-top: 1px solid rgba(255,255,255,.1);
+			padding: 30px  ;
+			padding-left: 50px;
+			border-top: 1px solid rgba(255,255,255,.1);
+			border-bottom: 1px solid black;
+
+		}
+
+		ul li:hover a{
+			padding-left: 50px;
+		}
+
+		.sidebar ul a{
+			margin-right: 16px;
+		}
+
+		#check{
+			display: none;
+		}
+
+		label #btn, label #cancel{
+			position: absolute;
+			cursor: pointer;
+			background: black;
+			border-radius: 3px;
+		}
+
+		label #btn{
+			left: 40px;
+			top: 25px;
+			font-size: 35px;
+			color: white;
+			padding: 6px 12px;
+			transition: all .5s;
+
+		}
+
+		label #cancel{
+			z-index: 1111;
+			left: -195px;
+			top: 17px;
+			font-size: 30px;
+			background-color: inherit;
+			color: white;
+			padding: 4px 9px;
+			transition: all .5s ease;
+		}
+
+		#check:checked ~ .sidebar{
+			left: 0;
+		}
+
+		#check:checked ~ label #btn{
+			left: 250px;
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		#check:checked ~ label #cancel{
+			left: 195px;
+		}
+
+		.discover{
+			font-size: 30px;
+			 color: black; 
+			 font-family: serif;
+			  background-color: white;
+			   border-color: gray; 
+			   border-radius:30px;
+			 font-weight: bolder;
+			 height: 80px;
+			 width: 170px;
+			 padding: 20px;
+		}
+
+		.menu
+		{
+			height: 80px;
+			 width: 170px;
+			 color: gold; 
+			 font-family: serif;
+			  background-color: inherit;
+			   border-color: black;
+			   font-size: 35px; 
+			
+			 font-weight: bolder;
+			 
+			 padding: 20px;
+		}
+
+		.next{
+			height: 50px;
+			width: 50px;
+			margin-top: 100px;
+		}

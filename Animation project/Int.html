@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INterior Main page</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style type="text/css">
+		
+		body{
+			font-family: 'Roboto',sans-serif;
+			overflow: hidden;
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-decoration: none;
+		}
+
+		.sidebar{
+			position: fixed;
+			left: -250px;
+			width: 250px;
+			height: 100%;
+			background: black;
+			transition: all .5s ease;
+		}
+
+		.sidebar header{
+			font-size: 22px;
+			color: white;
+			text-align: center;
+			line-height: 100px;
+			background: gray;
+			user-select: none;
+		}
+
+		.sidebar ul a{
+			display: block;
+			height: 100%;
+			width: 100%
+			line-height: 100px;
+			font-size: 20px;
+			color: white;
+			padding-left: 40px;
+			box-sizing: border-box;
+			border-top: 1px solid rgba(255,255,255,.1);
+			padding: 30px  ;
+			padding-left: 50px;
+			border-top: 1px solid rgba(255,255,255,.1);
+			border-bottom: 1px solid black;
+
+		}
+
+		ul li:hover a{
+			padding-left: 50px;
+		}
+
+		.sidebar ul a{
+			margin-right: 16px;
+		}
+
+		#check{
+			display: none;
+		}
+
+		label #btn, label #cancel{
+			position: absolute;
+			cursor: pointer;
+			background: black;
+			border-radius: 3px;
+		}
+
+		label #btn{
+			left: 40px;
+			top: 25px;
+			font-size: 35px;
+			color: white;
+			padding: 6px 12px;
+			transition: all .5s;
+
+		}
+
+		label #cancel{
+			z-index: 1111;
+			left: -195px;
+			top: 17px;
+			font-size: 30px;
+			background-color: inherit;
+			color: white;
+			padding: 4px 9px;
+			transition: all .5s ease;
+		}
+
+		#check:checked ~ .sidebar{
+			left: 0;
+		}
+
+		#check:checked ~ label #btn{
+			left: 250px;
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		#check:checked ~ label #cancel{
+			left: 195px;
+		}
+
+		body{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+.banner1,.banner2
+{
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+img{
+	width: 120%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	animation: zoom-out 5s linear infinite ;
+
+}
+
+@keyframes  zoom-out {
+100%{
+		width: 100%
+	}
+}
+.banner1text
+{
+	width: 600px;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	color: white;
+	
+}
+
+
+
+
+
+.banner1text h1{
+	margin-bottom: 40px;
+}
+
+.banner1text p
+{
+	font-size: 16px;
+	line-height: 18px;
+
+}
+
+.banner1{
+	animation: slide1 12s linear infinite;
+
+}
+
+.banner2{
+	animation: slide2 10s linear infinite;
+
+}
+
+@keyframes slide1{
+	
+50%{
+		visibility: visible;
+	}	
+
+	
+
+
+	
+	
+
+	100%{
+		visibility: hidden;
+	}
+}
+
+@keyframes slide2{
+	0%{
+		visibility: hidden;
+	}
+25%{
+		visibility: hidden;
+	}
+
+	100%{
+		visibility: visible;
+	}
+}
+
+.next{
+	margin-left: 500px;
+	margin-top: 200px;
+	border-radius: 25px;
+	border:3px white solid;
+
+
+}
+
+
+
+
+	</style>
+
+
+</head>
+<body>
+
+	<div class="banner1">
+		<img src="living/7.jpg">
+
+		
+		<div class="banner1text text1">
+			<h1 >Current Time is : <span  id="time"></span></h1>
+
+			<h1 class="lum">Interior Designs</h1>
+
+			<p>Design is not limited with the arrangement of furniture or lighting elements.In order to get a good result,every detail of internal space should have the right shape and color and be placed correctly</p>
+
+			<button class="next" style="background-color: black; color: white; height:50px; width: 50px;"><a href="project.html">
+                <i style="color: white;"  class="fa fa-chevron-down fa-2x" > </i></a></button>
+			
+		</div>
+		
+
+	</div>
+
+	<div class="banner2">
+		<img src="living/2.jpg">
+		<div class="banner1text text2">
+			<h1>Current Time is  :<span  id="time2"></span></h1>
+			<h1>Projects</h1>
+			
+			<p>Design is not limited with the arrangement of furniture or lighting elements.In order to get a good result,every detail of internal space should have the right shape and color and be placed correctly</p>
+			<button class="next" style="background-color: black; color: white; height:50px; width: 50px;"><a href="project.html"><i style="color: white;"  class="fa fa-chevron-down fa-2x" > </i></a></button>
+
+		</div>
+
+		
+
+	</div>
+	<input type="checkbox" id="check">
+	<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+		
+	</label>
+		<div class="sidebar">
+		
+		<header>My App</header>
+		<ul style="color: black; font-size: 20px;">
+			<li><a href="project.html">Projects</i></a></li>
+			<li><a href="#">About us</i></a></li>
+			<li><a href="#">Services</i></a></li>
+
+		</ul>
+	</div>
+	<section>
+		
+	</section>
+
+	
+	<script>
+
+		let a;
+		let date;
+		let time;
+		const options={weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+		setInterval(() => {
+			
+		
+		a = new Date();
+		let date= a.toLocaleDateString(undefined, options);
+		let time = a.getHours()+':'+a.getMinutes()+':'+a.getSeconds();
+		document.getElementById('time').innerHTML = time +" on "+ date;
+
+	},1000 );
+
+	setInterval(() => {
+			
+		
+			a = new Date();
+			let date= a.toLocaleDateString(undefined, options);
+			let time = a.getHours()+':'+a.getMinutes()+':'+a.getSeconds();
+			document.getElementById('time2').innerHTML = time +" on "+ date;
+	
+		},1000 );
+	</script>
+
+
+
+</body>
+</html>
